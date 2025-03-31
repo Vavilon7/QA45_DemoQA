@@ -1,14 +1,11 @@
 package pages.widgets;
 
-import config.BasePage;
+import com.demoqa.config.BasePage;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-
-import java.security.cert.X509Certificate;
 
 public class MenuPage extends BasePage {
     public MenuPage(WebDriver driver) {

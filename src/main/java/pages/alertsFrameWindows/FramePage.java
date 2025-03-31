@@ -1,6 +1,6 @@
 package pages.alertsFrameWindows;
 
-import config.BasePage;
+import com.demoqa.config.BasePage;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

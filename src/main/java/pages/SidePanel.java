@@ -1,6 +1,6 @@
 package pages;
 
-import config.BasePage;
+import com.demoqa.config.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +9,9 @@ import pages.alertsFrameWindows.BrowserWindowsPage;
 import pages.alertsFrameWindows.FramePage;
 import pages.bookStore.LoginPage;
 import pages.elements.ButtonsPage;
+import pages.elements.LinksImagesPage;
+import pages.elements.TextBoxPage;
+import pages.forms.PracticeFormPage;
 import pages.interactions.DragAndDropPage;
 import pages.widgets.MenuPage;
 import pages.widgets.SelectMenuPage;
@@ -93,5 +96,35 @@ public class SidePanel extends BasePage {
     public ButtonsPage selectButtons() {
         clickWithJS(buttons,0,100);
         return new ButtonsPage(driver);
+    }
+    @FindBy(xpath = "//*[.='Text Box']")
+    WebElement textBox;
+    public TextBoxPage selectTextBox() {
+        click(textBox);
+        return new TextBoxPage(driver);
+    }
+    @FindBy(xpath = "//*[.='Links']")
+    WebElement links;
+    public LinksImagesPage selectLinks() {
+        clickWithJS(links,0,200);
+        return new LinksImagesPage(driver);
+    }
+    @FindBy(xpath = "//*[.='Broken Links - Images']")
+    WebElement brokenLinksImages;
+    public LinksImagesPage selectBrokenLinkImages() {
+        clickWithJS(brokenLinksImages,0,200);
+        return new LinksImagesPage(driver);
+    }
+    @FindBy(xpath = "//*[.='Auto Complete']")
+    WebElement autoComplete;
+    public TextBoxPage selectAutoComplete() {
+        clickWithJS(autoComplete,0,400);
+        return new TextBoxPage(driver);
+    }
+    @FindBy(xpath = "//*[.='Practice Form']")
+    WebElement practiceForm;
+    public PracticeFormPage selectPracticeForm() {
+        click(practiceForm);
+        return new PracticeFormPage(driver);
     }
 }

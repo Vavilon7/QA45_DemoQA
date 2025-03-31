@@ -1,6 +1,6 @@
 package pages;
 
-import config.BasePage;
+import com.demoqa.config.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,6 +41,12 @@ public class HomePage extends BasePage {
     WebElement elements;
     public SidePanel getElements() {
         clickWithJS(elements,0,300);
+        return new SidePanel(driver);
+    }
+    @FindBy(css = ".card:nth-child(2)")
+    WebElement forms;
+    public SidePanel getForms() {
+        clickWithJS(forms,0,300);
         return new SidePanel(driver);
     }
 }

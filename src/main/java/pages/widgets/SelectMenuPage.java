@@ -1,6 +1,6 @@
 package pages.widgets;
 
-import config.BasePage;
+import com.demoqa.config.BasePage;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

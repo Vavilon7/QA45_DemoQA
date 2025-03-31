@@ -1,4 +1,4 @@
-package config;
+package com.demoqa.config;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,6 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -108,5 +111,21 @@ public class BasePage {
     }
     public String getValue(WebElement element,String value) {
         return element.getDomAttribute(value);
+    }
+    public void verifyLinks(String linkUrl) {
+        try {
+            URL url = new URL(linkUrl);
+            //create URL connection
+            HttpURLConnection connection =(HttpURLConnection) url.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.connect();
+            if (connection.getResponseCode()>=400){
+                System.out.println(linkUrl + " - " + connection.getResponseMessage() + " is a broken link ");
+            }else {
+                System.out.println(linkUrl + " - " + connection.getResponseMessage());
+            }
+        } catch (IOException e) {
+            System.out.println(linkUrl + " - " + e.getMessage() + " - error occurred ");;
+        }
     }
 }
