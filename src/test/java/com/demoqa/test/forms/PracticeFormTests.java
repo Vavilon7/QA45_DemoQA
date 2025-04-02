@@ -12,7 +12,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import pages.HomePage;
 import pages.SidePanel;
 import pages.forms.PracticeFormPage;
-
 import java.util.stream.Stream;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 

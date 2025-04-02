@@ -1,0 +1,16 @@
+1. class run
+mvn clean test -Dtest=ButtonsTests
+
+2.method run
+mvn clean test -Dtest=ButtonsTests#doubleClickTest
+
+3.with select browser
+mvn clean test -Dtest=ButtonsTests#doubleClickTest -Dbrowser=firefox
+
+4.groups with tag
+mvn clean test -Dgroups=smoke -Dbrowser=firefox
+
+5.parametrized method
+mvn clean test -Dgroups=parameters -Dusername=Ivan7 -Dpassword=77705Vika$
+
+mvn surefire-report:report-only

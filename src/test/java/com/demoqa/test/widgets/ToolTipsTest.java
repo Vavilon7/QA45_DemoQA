@@ -2,6 +2,7 @@ package com.demoqa.test.widgets;
 
 import com.demoqa.test.TestBase;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.HomePage;
 import pages.SidePanel;
@@ -14,6 +15,7 @@ public class ToolTipsTest extends TestBase {
         new SidePanel(driver).selectToolTips().hideAd();
     }
     @Test
+    @Tag("smoke")
     public void toolTipsTest(){
         new ToolTipsPage(driver).hoverToolTips().verifyToolTips("buttonToolTip");
     }

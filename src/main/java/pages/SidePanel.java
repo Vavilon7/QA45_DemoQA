@@ -11,6 +11,7 @@ import pages.bookStore.LoginPage;
 import pages.elements.ButtonsPage;
 import pages.elements.LinksImagesPage;
 import pages.elements.TextBoxPage;
+import pages.elements.UploadPage;
 import pages.forms.PracticeFormPage;
 import pages.interactions.DragAndDropPage;
 import pages.widgets.MenuPage;
@@ -126,5 +127,11 @@ public class SidePanel extends BasePage {
     public PracticeFormPage selectPracticeForm() {
         click(practiceForm);
         return new PracticeFormPage(driver);
+    }
+    @FindBy(xpath = "//*[.='Upload and Download']")
+    WebElement uploadAndDownload;
+    public UploadPage selectUploadAndDownload() {
+        clickWithJS(uploadAndDownload,0,300);
+        return new UploadPage(driver);
     }
 }
