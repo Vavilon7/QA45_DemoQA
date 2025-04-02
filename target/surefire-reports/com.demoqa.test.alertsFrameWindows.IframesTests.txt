@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.demoqa.test.alertsFrameWindows.IframesTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 120.3 s -- in com.demoqa.test.alertsFrameWindows.IframesTests
